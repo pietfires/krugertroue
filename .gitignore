@@ -1,0 +1,7 @@
+rsvp-private/
+backend/private/config.php
+backend/private/data/
+.env
+.env.*
+!.env.example
+.local/

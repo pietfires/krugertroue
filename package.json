@@ -1,0 +1,10 @@
+{
+  "name": "krugers-wedding-invitation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "test": "node --test tests/dev-server.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

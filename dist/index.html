@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="af">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta name="description" content="Ons trou-uitnodiging. Al die besonderhede vir ons spesiale dag.">
+  <title>Ons trou-uitnodiging</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="invitation" aria-label="Trou-uitnodiging">
+    <section class="page video-page is-active" aria-label="Welkom" data-theme="dark">
+      <video id="welcome-video" playsinline preload="metadata" poster="main-preview.png" role="button" tabindex="0" aria-label="Speel die uitnodiging" disablepictureinpicture disableremoteplayback><source src="main.mp4" type="video/mp4"></video>
+      <p id="video-error" class="video-error" role="status" hidden>Die video kon nie speel nie. Raak die skerm om weer te probeer.</p>
+    </section>
+    <section class="page countdown-page" aria-labelledby="countdown-title">
+      <div class="countdown-content">
+        <h1 id="countdown-title" class="script">Ons trou oor</h1>
+        <div class="flourish" aria-hidden="true"><span></span><img src="./bow.png" alt=""><span></span></div>
+        <p id="wedding-date" class="wedding-date">Ons sien uit na ons groot dag</p>
+        <div class="countdown" role="timer" aria-label="Tyd tot ons troue" aria-live="off">
+          <div><span id="days">—</span><small>Dae</small></div>
+          <div><span id="hours">—</span><small>Ure</small></div>
+          <div><span id="minutes">—</span><small>Minute</small></div>
+          <div><span id="seconds">—</span><small>Sekondes</small></div>
+        </div>
+      </div>
+    </section>
+    <section class="page artwork-page" aria-label="Tydlyn"><img src="2.png" alt="Tydlyn: aankoms om 08:30, foto's om 09:00 en ete om 10:30." draggable="false"></section>
+    <section class="page artwork-page venue-page" aria-label="Venue">
+      <div class="venue-artwork">
+        <img src="3.png" alt="Venue: Komma Koek en Koffie, Rhenosterfontein Rd, Cullinan, 1000." draggable="false">
+        <a class="maps-link" href="https://maps.app.goo.gl/NbToHotXTW9qVqjF6" target="_blank" rel="noopener noreferrer" aria-label="Maak die venue in Google Maps oop (nuwe oortjie)"></a>
+      </div>
+    </section>
+    <section class="page artwork-page" aria-label="Kleredrag"><img src="4.png" alt="Kleredrag: swart, formeel." draggable="false"></section>
+    <section class="page music-page" aria-label="Ons liedjie" data-theme="dark">
+      <div class="spotify-wrap"><iframe title="Ons liedjie op Spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5ozaEo4KGNnJgdzChs7FQi?utm_source=generator&amp;theme=0&amp;si=593a5f8bf0854b27" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+    </section>
+    <section class="page artwork-page rsvp-page" aria-label="RSVP">
+      <div class="rsvp-artwork">
+        <img src="6.png" alt="RSVP: bevestig asseblief teen 30 Oktober 2026." draggable="false">
+        <button id="open-rsvp" class="rsvp-hotspot" type="button" aria-label="Stuur jou RSVP" aria-haspopup="dialog"></button>
+      </div>
+    </section>
+  </main>
+  <dialog id="rsvp-dialog" aria-labelledby="rsvp-title">
+    <div class="rsvp-panel">
+      <button id="close-rsvp" class="dialog-close" type="button" aria-label="Maak RSVP toe">×</button>
+      <h2 id="rsvp-title" class="script">Jou RSVP</h2>
+      <div class="flourish" aria-hidden="true"><span></span><img src="./bow.png" alt=""><span></span></div>
+      <form id="rsvp-form">
+        <label class="form-field" for="rsvp-name">Naam<input id="rsvp-name" name="name" type="text" autocomplete="given-name" maxlength="100" pattern=".*\S.*" required></label>
+        <label class="form-field" for="rsvp-surname">Van<input id="rsvp-surname" name="surname" type="text" autocomplete="family-name" maxlength="100" pattern=".*\S.*" required></label>
+        <fieldset class="attendance"><legend>Sal jy saam met ons vier?</legend>
+          <label><input id="rsvp-yes" name="attendance" type="checkbox" value="yes"> Ja</label>
+          <label><input id="rsvp-no" name="attendance" type="checkbox" value="no"> Nee</label>
+        </fieldset>
+        <div class="form-trap" aria-hidden="true"><label>Webwerf<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <button id="submit-rsvp" class="submit-rsvp" type="submit">Stuur RSVP</button>
+        <p id="rsvp-status" class="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+  <nav class="page-navigation" aria-label="Blaai deur die uitnodiging" hidden></nav>
+  <button id="next-page" class="next-page" aria-label="Volgende afdeling" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+  <p id="navigation-status" class="sr-only" aria-live="polite">Afdeling 1 van 7: Welkom</p>
+</body>
+</html>
