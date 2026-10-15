@@ -17,17 +17,17 @@ Run `npm test` to verify submission handling. Stop the local server with Ctrl+C.
 
 ## Complete the countdown
 
-- The countdown screen uses a solid white background.
+- The countdown screen uses a solid white background, with the wedding date above its Allura title.
 - The countdown is configured for 12 December 2026 at 08:30 in South Africa (`+02:00`). Edit `weddingDate` in `dist/config.js` if this changes.
 
 The opening screen shows only a PNG preview of the video. Tap anywhere on it (or press Enter/Space) to start playback. Navigation is hidden and all section changes are blocked until the video finishes, then the invitation automatically advances to the countdown. Returning to the opening screen resets this behavior. If the tab is hidden, playback pauses and another tap resumes it.
 
-After the intro, swipe up/left for the next page; down/right for the previous page. Page dots, the next arrow, keyboard arrows and mouse wheel also work. Swipes inside Spotify's iframe are controlled by Spotify; use the surrounding background or page dots.
+The six sections are the opening video, countdown, timeline, venue, dress code and RSVP. After the intro, swipe up/left for the next page; down/right for the previous page. Page dots, the next arrow, keyboard arrows and mouse wheel also work.
 
-Images retain their entire composition, with white space on screens whose proportions differ from the PNG files. The Spotify background fills its section and its 352px player is centered horizontally and vertically.
+Images retain their entire composition, with white space on screens whose proportions differ from the PNG files.
 
 The Google Maps text has an accessible tap area aligned with the venue artwork. It opens the supplied Maps link in a new tab.
 
 The RSVP button opens a form styled with the countdown fonts. It collects name, surname and exactly one Yes/No attendance answer. The live frontend uses `https://krugers2b.co.za/rsvp-api/rsvp.php`; the uploaded PHP handler sends through the configured SMTP server to `krugers2b@gmail.com`. The server accepted a labelled test email on 15 October 2026. Inbox receipt must be confirmed by the mailbox owner. Local Node development still overrides this endpoint with the simulation. SMTP credentials belong only in the private server configuration, outside the web root. Backend files and hosting instructions are in `backend/`.
 
-Google Fonts and Spotify require an internet connection. The countdown fonts have local fallbacks. Host all files in `dist/` together on a static web host.
+Google Fonts requires an internet connection. The countdown fonts have local fallbacks. Host all files in `dist/` together on a static web host.

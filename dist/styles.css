@@ -18,11 +18,12 @@ video { width: 100%; height: 100%; object-fit: contain; display: block; }
 .countdown-page { display: grid; place-items: center; background: #fff; }
 .countdown-content { width: 100%; padding: 35px 20px; text-align: center; }
 h1 { margin: 34px 0 8px; font-size: clamp(64px, 20vw, 98px); }
-#countdown-title { font-family: 'Allura', 'Brush Script MT', cursive; }
+#countdown-title { margin: 0 0 8px; font-family: 'Allura', 'Brush Script MT', cursive; }
+.countdown-content .flourish { margin-bottom: 32px; }
 .flourish { display: flex; justify-content: center; align-items: center; gap: 15px; font-size: 27px; }
 .flourish span { width: 68px; height: 1px; background: #7c7b76; }
 .flourish img { display: block; width: 64px; height: 64px; object-fit: contain; }
-.wedding-date { font-size: 19px; margin: 24px 0 32px; }
+.wedding-date { font-size: 19px; margin: 0 0 20px; }
 .countdown { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 370px; margin: 0 auto; }
 .countdown div + div { border-left: 1px solid #24242030; }
 .countdown span { display: block; font-size: clamp(32px, 10vw, 48px); line-height: 1; font-variant-numeric: tabular-nums; }
@@ -54,9 +55,6 @@ h1 { margin: 34px 0 8px; font-size: clamp(64px, 20vw, 98px); }
 .rsvp-status:empty { display: none; }
 .rsvp-status[data-error='true'] { color: #8a2925; }
 .form-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-.music-page { background: #25272a url('5.png') center / cover no-repeat; display: grid; place-items: center; }
-.spotify-wrap { width: calc(100% - 48px); max-width: 420px; height: 352px; }
-.spotify-wrap iframe { display: block; border: 0; }
 .page-navigation { position: fixed; bottom: max(17px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; align-items: center; padding: 2px 7px; border-radius: 30px; background: #ffffffdf; z-index: 5; box-shadow: 0 1px 10px #0000000d; }
 .page-navigation button { border: 0; width: 26px; height: 28px; padding: 0; display: grid; place-items: center; background: transparent; }
 .page-navigation button::after { content: ''; width: 4px; height: 4px; border-radius: 50%; background: #92928b; transition: width .2s; }
